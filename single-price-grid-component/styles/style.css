@@ -1,0 +1,98 @@
+html {
+    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: "Comic Neue", cursive, Times, serif; /* this should be the rest of the output you got from Google fonts */
+    /* background-image: url('../images/abstract-art.jpg'); */
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    background-color: white;
+  }
+
+body {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin: 200px;
+  width: 300px;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "summary summary"
+    "features subscribe";
+  /* margin: 0 auto;
+  position: absolute; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  width: 300px;
+  --border-radius: 20px;
+}
+
+.summary {
+    background-color: #84dbbd;
+    grid-area: summary;
+    padding: 20px;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    /* overflow: auto; */
+}
+
+.summary > h2 {
+  color: green;
+}
+
+.subscription {
+  background-color: #3bb2b0;
+  padding: 10px 0px 0px 20px;
+  grid-area: subscribe;
+  border-bottom-right-radius: var(--border-radius);
+}
+
+#price {
+  font-size: 3vw;
+  font-weight: normal;
+  text-align: left;
+}
+
+.subscription > p > span:nth-of-type(2) {
+  text-align: center;
+  height: 20px;
+  vertical-align: 3px
+}
+
+#sign-up {
+  border-radius: 5px;
+  border: 0px solid;
+  color: white;
+  background-color: rgb(31, 101, 231);
+  width: 8em;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+#sign-up:active {
+  background-color: #3e8e41;
+  box-shadow: 0 1px black;
+  transform: translateY(2px);
+}
+
+.features {
+  grid-area: features;
+  background-color: #4abebd;
+  border-bottom-left-radius: var(--border-radius);
+  padding: 10px 0px 0px 20px;
+}
+
+.features > ul {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+}
+
