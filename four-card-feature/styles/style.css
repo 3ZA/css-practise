@@ -1,0 +1,109 @@
+html {
+    font-size: 12px;
+    font-family: "Courier", cursive, Times, serif;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    background-color: white;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+}
+
+header {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    margin: 0px auto;
+}
+
+header .title {
+    font-weight:100;
+}
+
+.subtitle {
+    align-self: center;
+    font-size: 1rem;
+    margin: 0px 80px;
+    color: grey;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-card {
+    height: 200px;
+    width: 290px;
+    word-wrap: break-word;
+    font-size: 12px;
+    border-top-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    padding: 30px;
+    margin: 20px;
+}
+
+.feature-card p {
+    color: grey;
+}
+
+.feature-card img {
+    height: 25%;
+    width: 25%;
+    margin-left: 70%;
+    margin-bottom: 20%;
+    bottom: 5%;
+    left: 5px;
+}
+
+.container > .left > .feature-card {
+    border-top-color: rgb(7, 167, 167);
+}
+
+.container > .mid > .feature-card:nth-of-type(1) {
+    border-top-color: red;
+}
+
+.container > .mid > .feature-card:nth-of-type(2) {
+    border-top-color: rgb(207, 161, 9);
+}
+
+.container > .right .feature-card {
+    border-top-color: rgb(5, 110, 110);
+}
+
+/* Desktop Screens */
+@media (min-width: 1100px) {
+    .mid {
+        flex-flow: column;
+        order: 1;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 700px) {
+    body {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .subtitle {
+        width: 70%;
+    }
+
+    .container {
+        flex-flow: row wrap;
+    }
+
+    .mid {
+        display: flex;
+        order: 0;
+    }
+}
