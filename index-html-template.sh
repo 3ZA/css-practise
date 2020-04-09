@@ -5,7 +5,9 @@ cat << _EOF_
 <!doctype html>
 <html>
 <head>
-    <title>HTML Template example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>project template</title>
 </head>
 
 <body>
