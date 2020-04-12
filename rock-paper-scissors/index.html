@@ -7,78 +7,18 @@
 </head>
 
 <body>
-<script>
-    let plays = ["Rock", "Paper", "Scissors"];
-    let outcomes = new Map()
-    outcomes.set("rock,paper", -1)
-    outcomes.set("rock,scissors", 1)
-    outcomes.set("rock,rock", 0)
-    outcomes.set("paper,rock", 1)
-    outcomes.set("paper,paper", 0)
-    outcomes.set("paper,scissors", -1)
-    outcomes.set("scissors,scissors", 0)
-    outcomes.set("scissors,paper", 1)
-    outcomes.set("scissors,rock", -1)
-
-    function computerPlay() {
-        var index = Math.floor(Math.random() * plays.length)
-        return plays[index]
-    }
-
-    function playRound(playerSelection, computerSelection) {
-        var player = playerSelection.toLowerCase();
-        var computer = computerSelection.toLowerCase();
-
-        checkMove(player)
-        checkMove(computer)
-
-       return outcomes.get(player.concat(",", computer));
-    }
-
-    function checkMove(move) {
-        switch(move) {
-            case "rock":
-            case "scissors":
-            case "paper":
-                return true;
-            default:
-                throw `invalid move ${move}. choose rock, paper or scissors`
-        }
-    }
-
-    function resultToString(result, playerSelection, computerSelection) {
-        switch (result) {
-            case 1:
-                return `You Win! ${playerSelection} beats ${computerSelection}`
-            case 0:
-                return `Draw! ${playerSelection}`
-            case -1:
-                return `You Lose! ${computerSelection} beats ${playerSelection}` 
-        }
-    }
-
-    function game() {
-        var scoreX = 0
-        var scoreY = 0
-        var move
-        for (let i = 0; i < 5; i++) {
-            playerMove = prompt("choose 0 [rock] / 1 [paper] / 2 [scissors]");
-            playerMove = plays[playerMove];
-            computerMove = computerPlay();
-            result = playRound(playerMove, computerMove)
-            if (result) {
-                scoreX++
-            } else if (result == -1) {
-                scoreY++
-            }
-            console.log(resultToString(result, playerMove, computerMove))
-        }
-        var winner = scoreX > scoreY ? "player"
-                    : scoreX == scoreY ? "draw"
-                    : "computer"
-        console.log(`Winner: ${winner}. Player ${scoreX} Computer ${scoreY}`)
-    }
-</script>
+<div id="score">`Player ${playerScore} Computer ${computerScore}</div>
+<div class="btn-container">
+    <div class="move-btn" id="rock">
+        <img src="images/rock.png" alt="rock">
+    </div>
+    <div class="move-btn" id="paper">
+        <img src="images/paper.png">
+    </div>
+    <div class="move-btn" id="scissors">
+        <img src="images/scissors.png"></div>
+</div>
+<script src="scripts/main.js"></script>
 </body>
 
 </html>

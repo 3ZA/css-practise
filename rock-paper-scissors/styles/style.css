@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-flow: column;
+}
+.move-btn {
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(13, 39, 95, 0.4);
+    text-shadow: 0 0 .5rem black;
+}
+
+.move-btn img {
+    height: 100px;
+    width:100px;
+}
+
+.move-btn > * {
+    pointer-events:none;
+}
+
+.btn-container {
+    display:flex;
+    flex-flow: row;
+}
