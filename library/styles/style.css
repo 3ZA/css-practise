@@ -1,0 +1,213 @@
+.body {
+    display: flex;
+}
+
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    background-color: rgb(131, 120, 120);
+}
+  
+
+header #bee {
+    height: auto;
+    width: 60px;
+    position: absolute;
+    margin-left: 5em;
+    margin-top: 1.2em;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+    height: 150px;
+    margin: 0px 20px;
+}
+
+header h1 {
+    text-decoration: underline;
+    background-image: -webkit-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, .7) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(0, 0, 0, .7) 50%,
+        rgba(0, 0, 0, .7) 70%,
+        transparent 70%,
+        transparent
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-color: rgb(248, 178, 1);
+    margin-bottom: 4px;
+    font-size: 50px;
+}
+
+h1, h2, h3 ,h4 ,h5 {
+    font-weight: 700;
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+    color: white;
+    margin-top: 10px;
+}
+
+thead th:nth-child(1) {
+    width: 40%;
+}
+  
+thead th:nth-child(2) {
+    width: 20%;
+}
+  
+thead th:nth-child(3) {
+    width: 10%;
+}
+  
+thead th:nth-child(4) {
+    width: 10%;
+}
+
+thead th:nth-child(4) {
+    width: 10%;
+
+}
+
+thead th {
+font-family: 'Oswald', sans-serif;
+}
+
+th {
+letter-spacing: 2px;
+}
+
+td {
+letter-spacing: 1px;
+}
+
+tbody td {
+text-align: center;
+}
+
+tfoot th {
+text-align: right;
+}
+
+thead {
+    background-color: rgb(214, 185, 18);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+    font-size: 17x;
+}
+
+tbody tr:nth-child(odd) {
+    background-color:rgb(56, 38, 3)
+}
+  
+tbody tr:nth-child(even) {
+    background-color: rgb(163, 128, 15);
+    
+}
+
+.close {
+    opacity: 0.7;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    padding: 0.5px;
+    content: ' ';
+    height: 10px;
+    width: 2px;
+    /* bottom: 2px; */
+    background-color: red;
+}
+.close:before {
+transform: rotate(45deg);
+}
+.close:after {
+transform: rotate(-45deg);
+}
+  
+
+button span {
+    opacity: 0.7;
+}
+
+button span:hover{
+    opacity: 1;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 500px;
+    /* Form outline */
+    padding: 1em;
+    border: 3px solid rgba(99, 49, 2, 0.658);
+    border-radius: 1em;
+    margin-left: 50px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+  }
+  form li + li {
+    margin-top: 1em;
+  }
+
+  input{
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 70%;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+form button {
+    background-color: transparent;
+    border: 0px;
+    font-size: 20px;
+    color: black;
+}
+
+#add-btn {
+    background-color:rgba(214, 169, 18, 0.795);
+    padding: 5px;
+    border-color: black;
+    border: 1px;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border:0px;
+    color: red;
+}

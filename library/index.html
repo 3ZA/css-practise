@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Book Shelf</title>
+    <link rel="icon" href="images/bee.png">
+
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>Libee</h1>
+        <img src="images/bee.png" id="bee">
+        <form>
+            <ul>
+                <li>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title">
+                </li>
+                <li>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author">
+                </li>
+                <li>
+                    <label for="no-of-pages">No. of pages:</label>
+                    <input type="text" id="no-of-pages" name="no-of-pages">
+                </li>
+                <li class="button">
+                    <button id="add-btn">Add book</button>
+                </li>
+            </ul>
+        </form>
+    </header>
+
+    <div class="container">
+        <table>
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">No.of pages</th>
+                <th scope="col">Read</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Buzzcocks</th>
+                <td>Bob</td>
+                <td>9</td>
+                <td><input type="checkbox"></td>
+                <td>
+                    <button type="button"class="delete-btn">
+                    <span>X</span>
+                    </button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">The Clash</th>
+                <td>Dan</td>
+                <td>6</td>
+                <td><input type="checkbox"></td>
+                <td>
+                    <button type="button"class="delete-btn">
+                    <span>X</span>
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+<script src="scripts/main.js"></script>
+</body>
+
+</html>
