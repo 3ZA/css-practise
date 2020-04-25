@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  grid-gap: 1px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  height: 400px;
+  width: 400px;
+}
+
+.square {
+  padding: 10px;
+  background-color: #ccc;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  height: 50%; /* = 100% - 2*10% padding */
+  width: 50%; /* = 100% - 2*5% padding */
+  padding: 25% 25%;
+  text-align: center;
+}
